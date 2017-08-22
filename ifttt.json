@@ -1,0 +1,124 @@
+{
+    "appid"       : "056924d2-bd4d-400b-8824-b89565886598",
+    "name"      : "IFTTT - Maker Channel",
+    "description" : "IFTTT Maker Channel connector",
+    "publisher": "Ryan Kranz",
+    "package_name": "phantom_ifttt",
+    "type": "generic",
+    "license": "The GNU General Public License v3.0",
+    "main_module" : "ifttt_connector.py",
+    "app_version": "1.0.0",
+    "utctime_updated": "2016-06-11T04:20:36.000000Z",
+    "product_vendor": "IFTTT",
+    "product_name": "IFTTT - Maker Channel",
+    "product_version_regex": ".*",
+    "min_phantom_version": "1.0.240",
+    "logo": "ifttt_logo.png",
+    "configuration": {
+          "api_key": {
+            "description": "Maker Channel API Key",
+            "data_type": "string",
+            "required": true
+          }
+    },
+    "actions": [
+      {
+        "action": "test connectivity",
+        "description": "Validate the asset configuration for connectivity.",
+        "type": "test",
+        "identifier": "test_asset_connectivity",
+        "read_only": true,
+        "parameters": {
+        },
+        "output": [],
+        "versions":"EQ(*)"
+      },
+      {
+        "action": "run action",
+        "description": "Trigger an ifttt action (via the Maker Channel)",
+        "type": "generic",
+        "identifier": "trigger_ifttt_action",
+        "read_only": true,
+        "parameters": {
+          "action": {
+            "description": "Name of Action/Event to trigger.",
+            "data_type": "string",
+            "contains": [],
+            "required": true
+          },
+          "value1": {
+            "description": "First Optional Value",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          },
+          "value2": {
+            "description": "Second Optional Value",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          },
+          "value3": {
+            "description": "Third Optional Value",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          }
+        },
+        "output" : [],
+        "versions":"EQ(*)"
+      },
+      {
+        "action": "send message",
+        "description": "Send and SMS message via send_sms_message IFTTT Maker Channel event",
+        "type": "generic",
+        "identifier": "send_sms_message",
+        "read_only": true,
+        "parameters": {
+          "message_title": {
+            "description": "Message Title",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          },
+          "message": {
+            "description": "Message Text",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          }
+        },
+        "output" : [],
+        "versions":"EQ(*)"
+      },
+      {
+        "action": "upload file",
+        "description": "Save Container details to Google Drive",
+        "type": "generic",
+        "identifier": "save_to_google_drive",
+        "read_only": true,
+        "parameters": {
+          "value1": {
+            "description": "Field 1 (Optional)",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          },
+          "value2": {
+            "description": "Field 2 (Optional)",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          },
+          "value3": {
+            "description": "Field 3 (Optional)",
+            "data_type": "string",
+            "contains": [],
+            "required": false
+          }
+        },
+        "output" : [],
+        "versions":"EQ(*)"
+    }
+    ]
+}
