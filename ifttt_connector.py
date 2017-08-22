@@ -14,8 +14,6 @@ from ifttt_consts import *
 import simplejson as json
 import requests
 
-requests.packages.urllib3.disable_warnings()
-
 
 # Define the App Class
 class IFTTTConnector(BaseConnector):

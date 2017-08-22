@@ -7,12 +7,12 @@
     "type": "generic",
     "license": "The GNU General Public License v3.0",
     "main_module" : "ifttt_connector.py",
-    "app_version": "1.0.0",
+    "app_version": "1.1.0",
     "utctime_updated": "2016-06-11T04:20:36.000000Z",
     "product_vendor": "IFTTT",
     "product_name": "IFTTT - Maker Channel",
     "product_version_regex": ".*",
-    "min_phantom_version": "1.0.240",
+    "min_phantom_version": "3.0.190",
     "logo": "ifttt_logo.png",
     "configuration": {
           "api_key": {
